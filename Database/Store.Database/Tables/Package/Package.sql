@@ -1,0 +1,9 @@
+﻿CREATE TABLE [dbo].[Package]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [UID] UNIQUEIDENTIFIER NOT NULL, 
+    [DeletedOn] SMALLDATETIME NULL, 
+    [Name] NVARCHAR(50) NOT NULL, 
+    [ProjectFK] INT NOT NULL, 
+    CONSTRAINT [FK_Package_Project] FOREIGN KEY ([ProjectFK]) REFERENCES [Project]([Id])
+)

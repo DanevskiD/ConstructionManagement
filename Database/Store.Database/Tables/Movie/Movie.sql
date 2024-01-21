@@ -1,0 +1,11 @@
+﻿CREATE TABLE [dbo].[Movie]
+(
+	[Id] INT NOT NULL PRIMARY KEY, 
+    [UID] UNIQUEIDENTIFIER NOT NULL, 
+    [DeletedOn] SMALLDATETIME NULL, 
+    [Name] NVARCHAR(50) NOT NULL, 
+    [Year] INT NOT NULL, 
+    [ProducerName] NVARCHAR(50) NOT NULL, 
+    [CategoryFK] INT NOT NULL
+)
+
